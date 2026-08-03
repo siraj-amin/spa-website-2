@@ -2,6 +2,7 @@
 
 :root{
   --ink:#2B1B14;
+  --ink-fixed:#2B1B14;
   --ink-soft:#5B4638;
   --paper:#FFFBF6;
   --paper-dim:#F6EEE4;
@@ -148,7 +149,7 @@ section{padding:88px 0;position:relative;}
 @keyframes riseIn{to{opacity:1;transform:none;}}
 .hero-visual{
   position:relative;border-radius:28px;overflow:hidden;aspect-ratio:4/5;
-  background:linear-gradient(160deg, color-mix(in srgb, var(--gold) 55%, var(--accent)) 0%, var(--accent-deep) 60%, var(--ink) 130%);
+  background:linear-gradient(160deg, color-mix(in srgb, var(--gold) 55%, var(--accent)) 0%, var(--accent-deep) 60%, var(--ink-fixed) 130%);
   box-shadow:0 30px 60px var(--shadow);
   opacity:0;transform:translateY(24px) scale(.98);animation:riseIn .9s .15s ease forwards;
 }
@@ -263,7 +264,7 @@ section{padding:88px 0;position:relative;}
 .areas-note a{color:var(--accent-deep);font-weight:700;border-bottom:1px solid currentColor;}
 
 /* ---------- SIGNATURE SPOTLIGHT ---------- */
-.spotlight{border-radius:28px;overflow:hidden;background:linear-gradient(120deg, var(--ink) 0%, #3B2415 55%, var(--accent-deep) 130%);color:#fff;display:grid;grid-template-columns:1fr 1fr;box-shadow:0 30px 60px var(--shadow);}
+.spotlight{border-radius:28px;overflow:hidden;background:linear-gradient(120deg, var(--ink-fixed) 0%, #3B2415 55%, var(--accent-deep) 130%);color:#fff;display:grid;grid-template-columns:1fr 1fr;box-shadow:0 30px 60px var(--shadow);}
 @media (max-width:880px){.spotlight{grid-template-columns:1fr;}}
 .spotlight-copy{padding:56px 50px;display:flex;flex-direction:column;justify-content:center;gap:18px;}
 .spotlight-copy .eyebrow{color:var(--gold);}
@@ -353,7 +354,7 @@ details p{padding:0 0 20px;}
 .cta-band .btn-primary{background:#fff;color:var(--accent-deep);box-shadow:0 10px 24px rgba(0,0,0,.25);}
 
 /* ---------- FOOTER ---------- */
-footer{background:var(--ink);color:#EFE3D6;padding:64px 0 28px;}
+footer{background:var(--ink-fixed);color:#EFE3D6;padding:64px 0 28px;}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;}
 @media (max-width:880px){.footer-grid{grid-template-columns:repeat(2,1fr);}}
 footer h4{font-family:var(--sans);font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;color:#C9A987;margin-bottom:16px;}
