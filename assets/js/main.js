@@ -21,11 +21,18 @@
   }
 
   document.querySelectorAll('.faq-list').forEach(list => {
-    const items = list.querySelectorAll('details');
+    const items = list.querySelectorAll('.faq-item');
     items.forEach(item => {
-      item.addEventListener('toggle', () => {
-        if (item.open) {
-          items.forEach(other => { if (other !== item) other.open = false; });
+      const btn = item.querySelector('.faq-q');
+      btn.addEventListener('click', () => {
+        const wasOpen = item.classList.contains('open');
+        items.forEach(other => {
+          other.classList.remove('open');
+          other.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        });
+        if (!wasOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
         }
       });
     });
