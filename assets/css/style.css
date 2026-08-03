@@ -335,13 +335,29 @@ section{padding:88px 0;position:relative;}
 
 /* ---------- FAQ ---------- */
 .faq-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px;}
-details{border:1px solid var(--sand-line);border-radius:14px;padding:6px 22px;background:var(--paper);transition:border-color .2s ease;}
-details[open]{border-color:var(--accent);}
-summary{cursor:pointer;padding:18px 0;font-weight:600;display:flex;justify-content:space-between;align-items:center;list-style:none;}
+details{
+  border:1px solid var(--sand-line);border-radius:14px;padding:6px 22px;background:var(--paper);
+  transition:background .35s ease, border-color .35s ease, box-shadow .35s ease, transform .25s ease;
+}
+summary{cursor:pointer;padding:18px 0;font-weight:600;display:flex;justify-content:space-between;align-items:center;list-style:none;transition:color .35s ease;}
 summary::-webkit-details-marker{display:none;}
-summary::after{content:"+";font-size:1.4rem;color:var(--accent);transition:transform .25s ease;}
+summary::after{content:"+";font-size:1.4rem;color:var(--accent);transition:transform .25s ease, color .35s ease;}
 details[open] summary::after{transform:rotate(45deg);}
-details p{padding:0 0 20px;}
+details p{padding:0 0 20px;transition:color .35s ease;}
+
+details:hover,
+details[open]{
+  background:linear-gradient(135deg,var(--accent),var(--accent-deep));
+  border-color:transparent;
+  box-shadow:0 16px 30px color-mix(in srgb, var(--accent-deep) 45%, transparent);
+}
+details:hover summary,
+details[open] summary{color:#fff;}
+details:hover summary::after,
+details[open] summary::after{color:#fff;}
+details:hover p,
+details[open] p{color:rgba(255,255,255,.9);}
+
 .faq-more{text-align:center;margin-top:28px;}
 
 /* ---------- FINAL CTA ---------- */

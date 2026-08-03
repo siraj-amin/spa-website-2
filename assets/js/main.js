@@ -19,4 +19,15 @@
     mnCloseBtn.addEventListener('click', () => mobileNav.classList.remove('open'));
     mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
   }
+
+  document.querySelectorAll('.faq-list').forEach(list => {
+    const items = list.querySelectorAll('details');
+    items.forEach(item => {
+      item.addEventListener('toggle', () => {
+        if (item.open) {
+          items.forEach(other => { if (other !== item) other.open = false; });
+        }
+      });
+    });
+  });
 })();
