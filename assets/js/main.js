@@ -15,9 +15,25 @@
   const hamburgerBtn = document.getElementById('hamburger-btn');
   const mnCloseBtn = document.getElementById('mn-close-btn');
   if (mobileNav && hamburgerBtn && mnCloseBtn) {
-    hamburgerBtn.addEventListener('click', () => mobileNav.classList.add('open'));
-    mnCloseBtn.addEventListener('click', () => mobileNav.classList.remove('open'));
-    mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+    const closeMobileNav = () => {
+      mobileNav.classList.remove('open');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('menu-open');
+    };
+    hamburgerBtn.setAttribute('aria-expanded', 'false');
+    hamburgerBtn.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+      document.body.classList.toggle('menu-open', isOpen);
+    });
+    mnCloseBtn.addEventListener('click', closeMobileNav);
+    mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileNav));
+    mobileNav.addEventListener('click', (event) => {
+      if (event.target === mobileNav) closeMobileNav();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeMobileNav();
+    });
   }
 
   document.querySelectorAll('.faq-list').forEach(list => {

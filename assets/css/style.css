@@ -94,11 +94,13 @@ nav.primary a:hover::after,nav.primary a.active::after{width:100%;}
 
 /* ---------- MOBILE NAV DRAWER ---------- */
 .mobile-nav{
-  display:none;position:fixed;inset:0;z-index:80;background:var(--paper);
+  display:flex;position:fixed;inset:0;z-index:80;background:var(--paper);
   padding:28px 28px 40px;flex-direction:column;overflow-y:auto;
+  opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-8px);
+  transition:opacity .22s ease, transform .22s ease, visibility .22s ease;
 }
-.mobile-nav.open{display:flex;}
-.mobile-nav .mn-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:36px;}
+.mobile-nav.open{opacity:1;visibility:visible;pointer-events:auto;transform:none;}
+.mobile-nav .mn-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:36px;flex:0 0 auto;}.mobile-nav .mn-top .logo{font-size:1.05rem}.mobile-nav .mn-top .logo .mark{width:30px;height:30px}.menu-open{overflow:hidden}
 .mn-close{background:none;border:0;font-size:1.8rem;color:var(--ink);cursor:pointer;line-height:1;padding:4px;}
 .mobile-nav a.mn-link{
   padding:16px 0;border-bottom:1px solid var(--sand-line);font-family:var(--serif);font-size:1.3rem;color:var(--ink);
