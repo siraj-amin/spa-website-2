@@ -58,7 +58,9 @@ header{
   transition:padding .25s ease, box-shadow .25s ease;
 }
 header.shrink{box-shadow:0 8px 24px var(--shadow);}
-.nav-row{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;padding:20px 0;transition:padding .25s ease;}\n.nav-row .logo{justify-self:start}.nav-row .primary{justify-self:center}.nav-row .header-actions{justify-self:end}
+.nav-row{display:flex;align-items:center;justify-content:space-between;padding:20px 0;transition:padding .25s ease;}
+.nav-row .primary{margin-inline:auto;}
+.nav-row .header-actions{flex:0 0 auto;}
 header.shrink .nav-row{padding:12px 0;}
 .logo{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:1.28rem;letter-spacing:.01em;}
 .logo .mark{
