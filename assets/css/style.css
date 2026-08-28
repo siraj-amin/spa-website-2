@@ -439,3 +439,28 @@ footer a:hover{color:var(--accent);}
   .service-media{height:200px;padding:16px;}
   .service-media .media-tag{font-size:.72rem;}
 }
+
+/* ---------- WELLNESS JOURNAL ---------- */
+.blog-hero{padding-bottom:72px;}
+.blog-hero h1{max-width:700px;font-size:clamp(2.5rem,6vw,4.6rem);line-height:1.03;margin-top:14px;}
+.blog-hero p.lede{max-width:560px;font-size:1.08rem;}
+.journal-feature{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center;}
+.journal-feature-image{aspect-ratio:4/3;overflow:hidden;border-radius:24px;background:var(--sand);}
+.journal-feature-image img,.journal-card-image img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
+.journal-feature:hover img,.journal-card:hover img{transform:scale(1.04);}
+.journal-feature-copy{max-width:460px;display:flex;flex-direction:column;align-items:flex-start;gap:16px;}
+.article-kicker{color:var(--accent-deep);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;}
+.journal-feature-copy h2{font-size:clamp(1.8rem,3vw,2.7rem);line-height:1.1;}
+.journal-feature-copy p{font-size:1rem;}
+.journal-list-section{background:var(--paper-dim);}
+.journal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.journal-card{background:var(--paper);border:1px solid var(--sand-line);border-radius:18px;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease;}
+.journal-card:hover{transform:translateY(-6px);box-shadow:0 20px 34px var(--shadow);}
+.journal-card-image{display:block;height:220px;overflow:hidden;background:var(--sand);}
+.journal-card-body{padding:24px;display:flex;flex-direction:column;align-items:flex-start;gap:10px;}
+.journal-card h3{font-size:1.35rem;line-height:1.18;}
+.journal-card p{font-size:.9rem;}
+.text-link{font-size:.86rem;font-weight:700;color:var(--accent-deep);margin-top:4px;}
+.journal-note{padding-top:0;background:var(--paper-dim);}
+@media (max-width:880px){.journal-feature{grid-template-columns:1fr;gap:30px}.journal-feature-copy{max-width:620px}.journal-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:600px){.journal-grid{grid-template-columns:1fr}.journal-card-image{height:200px}.blog-hero h1{font-size:2.8rem}.journal-feature-image{aspect-ratio:1/1;}}
