@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://karachibestescorts.com/sitemap.xml
-
