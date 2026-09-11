@@ -1,5 +1,96 @@
-User-agent: *
+User-Agent: *
+
 Allow: /
 
-Sitemap: https://karachibestescorts.com/sitemap.xml
 
+User-Agent: GPTBot
+
+Allow: /
+
+Allow: /llms.txt
+
+Allow: /llms-full.txt
+
+Allow: /sitemap.xml
+
+
+User-Agent: ChatGPT-User
+
+Allow: /
+
+Allow: /llms.txt
+
+Allow: /llms-full.txt
+
+Allow: /sitemap.xml
+
+
+User-Agent: ClaudeBot
+
+Allow: /
+
+Allow: /llms.txt
+
+Allow: /llms-full.txt
+
+Allow: /sitemap.xml
+
+
+User-Agent: anthropic-ai
+
+Allow: /
+
+Allow: /llms.txt
+
+Allow: /llms-full.txt
+
+Allow: /sitemap.xml
+
+
+User-Agent: PerplexityBot
+
+Allow: /
+
+Allow: /llms.txt
+
+Allow: /llms-full.txt
+
+Allow: /sitemap.xml
+
+
+User-Agent: Google-Extended
+
+Allow: /
+
+Allow: /llms.txt
+
+Allow: /llms-full.txt
+
+Allow: /sitemap.xml
+
+
+User-Agent: Applebot-Extended
+
+Allow: /
+
+Allow: /llms.txt
+
+Allow: /llms-full.txt
+
+Allow: /sitemap.xml
+
+
+User-Agent: cohere-ai
+
+Allow: /
+
+Allow: /llms.txt
+
+Allow: /llms-full.txt
+
+Allow: /sitemap.xml
+
+
+Host: https://www.karachibestescorts.com/
+
+Sitemap: https://karachibestescorts.com/sitemap.xml
